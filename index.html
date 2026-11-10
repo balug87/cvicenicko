@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cvičeníčko - gymnastické cvičení pro děti s rodiči v Brně</title>
+  <meta name="description" content="Cvičeníčko: gymnastické cvičení pro děti s rodiči, děti od 3 do 9 let a gymnastická přípravka v Brně. OneClub Lužánky a ZŠ Řehořova.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23ff5a5f'/><text x='50' y='66' font-size='48' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>C</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#uvod">Cvičeníčko<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#programy">Programy</a></li>
+        <li><a href="#cenik">Ceník</a></li>
+        <li><a href="#rozvrh">Rozvrh a přihlášky</a></li>
+        <li><a href="#galerie">Fotogalerie</a></li>
+        <li><a href="#kde">Kde cvičíme</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <header class="hero" id="uvod">
+    <div class="hero-slides"></div>
+    <div class="hero-content">
+      <h1 id="hero-title"></h1>
+      <p id="hero-sub"></p>
+      <a class="btn" data-booking href="#">Přihlásit se</a>
+      <div class="hero-dots"></div>
+    </div>
+  </header>
+
+  <div class="notice"></div>
+
+  <section id="programy">
+    <div class="wrap">
+      <h2 class="section-title">Dopřejte svým dětem zdravý pohyb, který je bude bavit</h2>
+      <div class="intro-grid" style="margin-bottom:56px">
+        <p class="section-lead" id="intro-text"></p>
+        <img id="intro-img" alt="Cvičeníčko">
+      </div>
+      <div class="programs-grid"></div>
+    </div>
+  </section>
+
+  <section id="cenik" style="background:#fdf7f3">
+    <div class="wrap">
+      <h2 class="section-title">Ceník 2026/2027</h2>
+      <p class="section-lead">Školní rok je organizován v blocích a pololetích. Přihlásit se lze kdykoliv, i do probíhajícího období.</p>
+      <div class="price-grid"></div>
+    </div>
+  </section>
+
+  <section id="rozvrh" class="schedule-band">
+    <div class="wrap">
+      <h2 class="section-title">Rozvrh a přihlášky</h2>
+      <span class="schedule-notice" style="display:block;width:fit-content"></span>
+      <div id="sessions"></div>
+      <div class="schedule-links"></div>
+      <p id="waitlist" class="waitlist"></p>
+    </div>
+  </section>
+
+  <section id="lekatori">
+    <div class="wrap">
+      <h2 class="section-title">Naši zkušení lektoři</h2>
+      <p class="section-lead">Program Cvičeníčko vznikl v roce 2006 pod vedením trenérky sportovní gymnastiky s dlouholetou praxí.</p>
+      <div class="lecturers-grid" id="lecturers"></div>
+    </div>
+  </section>
+
+  <section id="galerie" style="background:#fdf7f3">
+    <div class="wrap">
+      <h2 class="section-title">Fotogalerie</h2>
+      <p class="section-lead">Klikněte na fotku pro zvětšení. Procházejte šipkami na klávesnici.</p>
+      <div id="galerie-alba"></div>
+    </div>
+  </section>
+
+  <section id="kde">
+    <div class="wrap">
+      <h2 class="section-title">Kde cvičíme</h2>
+      <p class="section-lead">Dvě místa v Brně: tělocvična ZŠ Řehořova v Černovicích a OneClub Fitcentrum Lužánky v OC Meta.</p>
+      <div class="places-grid" id="places"></div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="contact-band">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 class="section-title">Kontakt</h2>
+        <ul class="contact-list" id="contact-list"></ul>
+        <div class="socials" id="socials"></div>
+        <p class="legal" id="contact-legal"></p>
+      </div>
+      <div class="map-embed"><iframe id="map-frame" loading="lazy" title="Mapa"></iframe></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="logo" href="#uvod">Cvičeníčko<span style="color:var(--coral)">.</span></a>
+      <span>Gymnastické cvičení pro děti s rodiči v Brně</span>
+      <span>© <span id="year"></span> Cvičeníčko</span>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Fotogalerie">
+    <img alt="">
+    <div class="lb-nav">
+      <button class="lb-prev" aria-label="Předchozí">←</button>
+      <button class="lb-close" aria-label="Zavřít">✕</button>
+      <button class="lb-next" aria-label="Další">→</button>
+    </div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
